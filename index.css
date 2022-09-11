@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+*{
+    font-family: 'Quicksand', sans-serif;
+    padding:0;
+    margin:0;
+    border:0;
+    box-sizing: border-box;
+}   
+
+body{
+    width:100%;
+    height:100%;
+    background: linear-gradient(35deg,rgb(17, 17, 61), rgb(29, 9, 9));
+    color: white;
+    font-size: 16px;
+}
+
+
+
+
+input,button{
+    font-size: 16px;
+    padding: .8rem;
+    border-radius: 20px;
+}
+button{
+    cursor: pointer;
+    margin: 1rem;
+}
+input{
+    width:100%;
+}
+
+.list-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    padding-left:15%;
+    padding-right:15%;
+    
+}
+
+.items{
+    padding-left:15%;
+    padding-right:15%;
+}
+
+.list-object{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    list-style: none;
+    margin-bottom: .5rem;
+    padding-left:.5rem;
+}
+.list-item{
+    background-color: rgba(128, 181, 202, 0.438);
+    display:flex;
+    text-overflow: ellipsis;
+    justify-content: center;
+    width:100%;
+    padding: 1rem;
+    border-radius:30px;
+    font-size:auto;
+
+
+}
+.del-btn{
+    transition: all .3s ease;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 30px;
+}
+
+.del-btn:hover{
+    color:white;
+    background-color: black;
+}
