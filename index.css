@@ -8,8 +8,14 @@
     box-sizing: border-box;
 }   
 
+.bg{
+    background-image: url('img/bg.jpg') ;
+    height:100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 body{
-    background-color:rgb(17, 17, 41);
     color: white;
     font-size: 16px;
 }
@@ -20,17 +26,29 @@ body{
 input,button{
     font-size: 16px;
     padding: .8rem;
-    border-radius: 20px;
+    border-radius: 30px;
+}
+
+
+input{
+    width:100%;
+    background-color:rgba(255,255,255,0);
+    color:white;
+    transition:all .3s ease-out;
+}
+
+input::placeholder{
+    color:rgb(138, 138, 138);
 }
 
 input:focus{
-    box-shadow: 0 0 8px  #62abe6;
-    outline: none;
+    background-color: rgba(131, 179, 179, 0.205);
+    outline:none;
 }
 
 button{
     cursor: pointer;
-    margin: 1rem;
+    margin: .5rem;
     transition: all .2s ease-out;
 }
 
@@ -39,44 +57,69 @@ button:hover{
     background-color: rgb(115, 204, 142);
 }
 
-input{
-    width:100%;
-}
-
 .list-container{
     display:flex;
     align-items:center;
     justify-content:space-around;
-    padding-left:15%;
-    padding-right:15%;
+    margin-left:15%;
+    margin-right:15%;
     
 }
 
 .items{
-    padding-left:15%;
-    padding-right:15%;
+    margin-left:15%;
+    margin-right:15%;
+    margin-top:1rem;
+    border-radius: 30px;
+
 }
+
+
+
+
+  @keyframes append-animate {
+	from {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+	to {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+}
+
 
 .list-object{
     display:flex;
     align-items:center;
     justify-content:space-between;
     list-style: none;
+    background-color: rgba(131, 179, 179, 0.205);
+    border-radius: 40px;
     margin-bottom: .5rem;
-    padding-left:.5rem;
+    padding-left:.7rem;
+    padding-right:.7rem;
+    animation: append-animate .4s ease;
+    transition: all .3s ease-out;
 }
+
+.list-object:hover{
+    background-color: rgba(153, 209, 153, 0.336);
+    cursor: pointer;
+}
+
 .list-item{
-    background-color: rgba(128, 181, 202, 0.438);
+    padding:.5rem;
     display:flex;
     text-overflow: ellipsis;
     justify-content: center;
     width:100%;
-    padding: 1rem;
     border-radius:30px;
     font-size:auto;
 
-
 }
+
+
 .del-btn{
     transition: all .2s ease-out;
     padding-left: 1rem;
@@ -91,4 +134,10 @@ input{
 
 .del-btn:focus{
     background-color:gray;
+}
+
+hr{
+    border: 1px solid white;
+    margin-left:15%;
+    margin-right:15%;
 }
