@@ -30,6 +30,7 @@ body{
 }
 
 #logo{
+    font-size: 16px;
     cursor:pointer;
     padding: 1.5rem;
 }
@@ -39,6 +40,7 @@ body{
 }
 
 .nav-item{
+    color: rgb(22, 112, 223);
     display:block;
     padding: 1.5rem;
 }
@@ -150,7 +152,7 @@ button:hover{
 }
 
 .list-item{
-    padding:.5rem;
+    padding: 1.3rem .5rem;
     display:flex;
     text-overflow: ellipsis;
     justify-content: center;
@@ -180,4 +182,16 @@ hr{
     border: 1px solid white;
     margin-left:8%;
     margin-right:8%;
+}
+
+.strike{
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+    color:rgb(224, 77, 77);
+    text-decoration-color: rgb(255, 255, 255) ;
+}
+
+.enter-btn{
+    padding: .8rem 1rem;
+    font-weight: bold; 
 }
