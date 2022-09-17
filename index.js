@@ -2,22 +2,21 @@ btn = document.querySelector('#btn');
 list = document.querySelector('.ul-list');
 input = document.querySelector('#input');
 
-input.addEventListener("keypress", function(event) {
+input.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
-        console.log("enter");
         addItem();
     }
-  });
+});
 
 btn.onclick = function () { addItem() };
 
 
 function addItem() {
     if (input.value != '') {
-        div= document.createElement('div');
+        div = document.createElement('div');
         li = document.createElement('li');
         btn = document.createElement('button');
-        
+
         btn.innerText = 'x';
         li.innerText = input.value;
 
@@ -25,7 +24,7 @@ function addItem() {
         li.setAttribute('onclick', "strike(this)");
         btn.setAttribute('type', 'button');
         btn.setAttribute('class', 'del-btn');
-        btn.setAttribute('onclick','deleteItem(this)');
+        btn.setAttribute('onclick', 'deleteItem(this)');
 
         div.append(li);
         div.append(btn);
